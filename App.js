@@ -3,7 +3,7 @@
 import React from 'react';
 import { View, Text,StyleSheet } from 'react-native';
 import { NavigationContainer, DarkTheme } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import SummaryStatementNavigator from './app/navigation/SummaryStatementNavigator';
 import AdminHomeScreen from './app/screens/AdminHomeScreen';
 import {
@@ -25,7 +25,6 @@ function HomeScreen() {
   );
 }
 
-const Stack = createNativeStackNavigator();
 
 function App() {
   return (

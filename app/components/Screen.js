@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import colors from '../config/colors';
 
-import color from "../config/colors"
 
 function Screen({children}) {
     return (
@@ -17,7 +16,7 @@ export default Screen;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.white,
+        backgroundColor: colors.background,
     },
 });
     
