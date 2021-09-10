@@ -3,6 +3,7 @@ export default {
    galleryWhite: "#f0f0f0",
    catskillWhite: "#e6cad9",
    wildSand: "#f4f4f4",
-   white: "#fff",
+   background: "#fff",
    iconBackground: "#E4F5F5",
+   white: "#fff"
   };
