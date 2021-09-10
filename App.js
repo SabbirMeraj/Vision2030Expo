@@ -16,6 +16,8 @@ import {
 } from 'react-native-popup-menu';
 import AdminHomeNavigator from './app/navigation/AdminHomeNavigator';
 import colors from './app/config/colors';
+import InputBox from './app/components/InputBox';
+import DepositScreen from './app/screens/DepositScreen';
 
 function HomeScreen() {
   return (
@@ -28,20 +30,16 @@ function HomeScreen() {
 
 function App() {
   return (
-    // <NavigationContainer>
-    //   <Stack.Navigator>
-    //     <Stack.Screen name="Home" component={HomeScreen} />
-    //   </Stack.Navigator>
-    // </NavigationContainer>
-// {/* <NavigationContainer>
-// <SummaryStatementNavigator/>
-// </NavigationContainer> */}
-<MenuProvider>
+ 
+ <MenuProvider>
   <NavigationContainer>
 <AdminHomeNavigator/>
 </NavigationContainer>
-</MenuProvider>
+</MenuProvider> 
+// {/* <View style={styles.container}>
 
+// </View> */}
+// <DepositScreen/>
   );
 }
 
@@ -50,7 +48,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 50,
+  
     backgroundColor: '#ecf0f1',
   },
 });
