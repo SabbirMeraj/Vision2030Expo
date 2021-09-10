@@ -1,5 +1,12 @@
 import React from "react";
-import { ImageBackground, StyleSheet, View, Text, TouchableOpacity, TouchableWithoutFeedback } from "react-native";
+import {
+  ImageBackground,
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+} from "react-native";
 import {
   MenuContext,
   Menu,
@@ -73,16 +80,14 @@ function AdminHomeScreen({ navigation }) {
             <MenuOption
               onSelect={() => navigation.navigate("SummaryStatementNavigator")}
             >
-               <ListItem
+              <ListItem
                 imageSrc={require("../assets/Icon/summaryStatement.png")}
                 imageSize={30}
                 text={"Summary Statement"}
                 textStyle={{ marginLeft: -10 }}
               />
             </MenuOption>
-            <MenuOption
-              onSelect={() => alert(`Save`)}
-            >
+            <MenuOption onSelect={() => alert(`Save`)}>
               <ListItem
                 imageSrc={require("../assets/Icon/individualStatement.png")}
                 imageSize={30}
@@ -90,9 +95,7 @@ function AdminHomeScreen({ navigation }) {
                 textStyle={{ marginLeft: -10 }}
               />
             </MenuOption>
-            <MenuOption
-              onSelect={() => alert(`Save`)}
-            >
+            <MenuOption onSelect={() => alert(`Save`)}>
               <ListItem
                 imageSrc={require("../assets/Icon/overallStatement.png")}
                 imageSize={30}
@@ -103,12 +106,14 @@ function AdminHomeScreen({ navigation }) {
           </MenuOptions>
         </Menu>
 
-        <Icon
-          title="Deposit"
-          image={require("../assets/Icon/deposit.png")}
-          size={60}
-          backgroundColor={color.iconBackground}
-        />
+        <TouchableOpacity onPress={() => navigation.navigate("Deposit")}>
+          <Icon
+            title="Deposit"
+            image={require("../assets/Icon/deposit.png")}
+            size={60}
+            backgroundColor={color.iconBackground}
+          />
+        </TouchableOpacity>
 
         <Menu>
           <MenuTrigger>
@@ -151,7 +156,7 @@ function AdminHomeScreen({ navigation }) {
           </MenuTrigger>
 
           <MenuOptions customStyles={optionsStyles}>
-          <MenuOption onSelect={() => alert(`Touched`)}>
+            <MenuOption onSelect={() => alert(`Touched`)}>
               <ListItem
                 imageSrc={require("../assets/Icon/create1.png")}
                 imageSize={30}
@@ -219,7 +224,7 @@ function AdminHomeScreen({ navigation }) {
           </MenuTrigger>
 
           <MenuOptions customStyles={optionsStyles}>
-          <MenuOption onSelect={() => alert(`Touched`)}>
+            <MenuOption onSelect={() => alert(`Touched`)}>
               <ListItem
                 imageSrc={require("../assets/Icon/transferAsset.png")}
                 imageSize={30}
@@ -251,7 +256,7 @@ function AdminHomeScreen({ navigation }) {
           backgroundColor={color.iconBackground}
         />
       </View>
- 
+
       <View style={styles.bottomSection}>
         <View style={styles.footer}>
           <View style={styles.settingsIcon}>
@@ -322,7 +327,7 @@ const styles = StyleSheet.create({
 
 const optionsStyles = {
   optionsContainer: {
-width: 250
+    width: 250,
   },
   optionWrapper: {
     margin: 2,
