@@ -5,7 +5,7 @@ import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
 import colors from "../config/colors";
 import Footer from "../components/Footer";
 import Dropdown from "../components/Dropdown";
-
+import CalendarPicker from "../components/CalendarPicker";
 const persons = ["Sabbir", "Siam", "Zahir", "Sadik", "Tanvir", "Akhiar", "Rafi", "Shuvo"]
 
 
@@ -16,7 +16,7 @@ function DepositScreen(props) {
         <Dropdown dataArray={persons} text={'Depositor'}/>
         <InputBox text={"Amount"} />
         <Dropdown dataArray={persons} text={'Collector'}/>
-        <InputBox text={"Date"} />
+        <CalendarPicker />
 
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Save</Text>

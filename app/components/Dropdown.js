@@ -2,6 +2,7 @@ import React from "react";
 import SelectDropdown from "react-native-select-dropdown";
 import { StyleSheet, View, Text } from "react-native";
 import colors from "../config/colors";
+import ListItem from "./ListItem";
 
 function Dropdown({ dataArray, text }) {
   return (
@@ -23,6 +24,15 @@ function Dropdown({ dataArray, text }) {
         }}
         buttonStyle={styles.dropdownField}
         buttonTextStyle={styles.dropdownFieldText}
+        renderDropdownIcon={() => {
+          return (
+            <ListItem
+            imageSrc={require("../assets/Icon/down-chevron.png")}
+            imageSize={20}
+            style={{marginRight: -10,marginTop: 2}}
+          />
+          );
+        }}
         dropdownIconPosition={"right"}
         dropdownStyle={styles.dropdownList}
         rowStyle={styles.dropdownListRow}
