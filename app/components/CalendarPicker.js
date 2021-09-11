@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, TextInput, Button } from "react-native";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import colors from "../config/colors";
 
-function CalendarPicker() {
+function CalendarPicker({label}) {
   const [date, setDate] = useState(new Date());
   const [show, setShow] = useState(false);
   const [text, setText] = useState('Select Date');
@@ -26,7 +26,7 @@ function CalendarPicker() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}> Date: </Text>
+      <Text style={styles.label}>{label}: </Text>
       <View style={styles.field}>
         <Text onPress={showDatepicker}> {text}</Text>
       </View>
