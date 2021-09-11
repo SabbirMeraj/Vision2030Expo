@@ -1,22 +1,15 @@
 import React from "react";
-import Screen from "../components/Screen";
-import InputBox from "../components/InputBox";
 import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
-import colors from "../config/colors";
+import Screen from "../components/Screen";
 import Footer from "../components/Footer";
-import Dropdown from "../components/Dropdown";
-import CalendarPicker from "../components/CalendarPicker";
-const persons = ["Sabbir", "Siam", "Zahir", "Sadik", "Tanvir", "Akhiar", "Rafi", "Shuvo"]
+import colors from "../config/colors";
+import InvestmentComponent from "../components/screen_component/InvestmentComponent";
 
-
-function DepositScreen(props) {
+function AddInvestmentScreen(props) {
   return (
     <Screen>
       <View style={styles.container}>
-        <Dropdown dataArray={persons} text={'Depositor'}/>
-        <InputBox text={"Amount"} />
-        <Dropdown dataArray={persons} text={'Collector'}/>
-        <CalendarPicker label={"Date"}/>
+        <InvestmentComponent />
 
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Save</Text>
@@ -26,26 +19,26 @@ function DepositScreen(props) {
     </Screen>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 20,
+    paddingTop: 5,
   },
   buttonText: {
     fontWeight: "bold",
     color: colors.black,
     fontSize: 18,
   },
+
   button: {
     backgroundColor: colors.button,
     borderRadius: 5,
     height: 50,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 10,
+    marginTop: 5,
     marginHorizontal: 20,
   },
 });
 
-export default DepositScreen;
+export default AddInvestmentScreen;

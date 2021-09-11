@@ -126,7 +126,7 @@ function AdminHomeScreen({ navigation }) {
           </MenuTrigger>
 
           <MenuOptions customStyles={optionsStyles}>
-            <MenuOption onSelect={() => alert(`Touched`)}>
+            <MenuOption onSelect={() => navigation.navigate("Add Investment")}>
               <ListItem
                 imageSrc={require("../assets/Icon/add.png")}
                 imageSize={30}

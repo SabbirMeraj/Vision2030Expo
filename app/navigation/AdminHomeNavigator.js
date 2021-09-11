@@ -10,6 +10,7 @@ import colors from "../config/colors";
 import AdminHomeScreen from "../screens/AdminHomeScreen";
 import SummaryStatementNavigator from "./SummaryStatementNavigator";
 import DepositScreen from "../screens/DepositScreen";
+import AddInvestmentScreen from "../screens/AddInvestmentScreen";
 
 const Stack = createStackNavigator();
 
@@ -21,7 +22,6 @@ const AdminHomeNavigator = () => (
         // stackAnimation: "none"
       }}
     >
-       
       <Stack.Screen
         name="Admin Home"
         component={AdminHomeScreen}
@@ -32,11 +32,9 @@ const AdminHomeNavigator = () => (
         component={SummaryStatementNavigator}
         options={{ headerShown: false }}
       />
-      <Stack.Screen
-        name="Deposit"
-        component={DepositScreen}
-      />
-     
+      <Stack.Screen name="Deposit" component={DepositScreen} />
+
+      <Stack.Screen name="Add Investment" component={AddInvestmentScreen} />
     </Stack.Navigator>
   </View>
 );
