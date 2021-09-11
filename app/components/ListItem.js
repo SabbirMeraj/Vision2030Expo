@@ -22,6 +22,7 @@ function ListItem({ imageSrc, imageSize, text, subText, textStyle, value,style }
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
+
   },
   textContainer: {
     justifyContent: "center",
