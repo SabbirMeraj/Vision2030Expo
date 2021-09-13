@@ -156,7 +156,7 @@ function AdminHomeScreen({ navigation }) {
           </MenuTrigger>
 
           <MenuOptions customStyles={optionsStyles}>
-            <MenuOption onSelect={() => alert(`Touched`)}>
+            <MenuOption onSelect={() =>navigation.navigate("Create Asset Type")}>
               <ListItem
                 imageSrc={require("../assets/Icon/create1.png")}
                 imageSize={30}
@@ -164,7 +164,7 @@ function AdminHomeScreen({ navigation }) {
                 textStyle={{ marginLeft: -10 }}
               />
             </MenuOption>
-            <MenuOption onSelect={() => alert(`Touched`)}>
+            <MenuOption onSelect={() => navigation.navigate("Create Asset Holder")}>
               <ListItem
                 imageSrc={require("../assets/Icon/create.png")}
                 imageSize={30}
@@ -172,7 +172,7 @@ function AdminHomeScreen({ navigation }) {
                 textStyle={{ marginLeft: -10 }}
               />
             </MenuOption>
-            <MenuOption onSelect={() => alert(`Touched`)}>
+            <MenuOption onSelect={() => navigation.navigate("Create Asset")}>
               <ListItem
                 imageSrc={require("../assets/Icon/add.png")}
                 imageSize={30}

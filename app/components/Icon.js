@@ -29,7 +29,7 @@ function Icon({ title, size, image, backgroundColor}) {
           />
         </View>
 
-        {title &&                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <Text style={styles.title}> {title}</Text>}
+        {title && <Text style={styles.title}> {title}</Text>}
       </View>
   );
 }
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     padding: 5,
     margin: 5,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   image: {
     flex: 1,

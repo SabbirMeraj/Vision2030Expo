@@ -11,6 +11,9 @@ import AdminHomeScreen from "../screens/AdminHomeScreen";
 import SummaryStatementNavigator from "./SummaryStatementNavigator";
 import DepositScreen from "../screens/DepositScreen";
 import AddInvestmentScreen from "../screens/AddInvestmentScreen";
+import CreateAssetTypeScreen from "../screens/CreateAssetTypeScreen";
+import CreateAssetHolderScreen from "../screens/CreateAssetHolderScreen";
+import CreateAssetScreen from "../screens/CreateAssetScreen";
 
 const Stack = createStackNavigator();
 
@@ -35,6 +38,9 @@ const AdminHomeNavigator = () => (
       <Stack.Screen name="Deposit" component={DepositScreen} />
 
       <Stack.Screen name="Add Investment" component={AddInvestmentScreen} />
+      <Stack.Screen name="Create Asset Type" component={CreateAssetTypeScreen} />
+      <Stack.Screen name="Create Asset Holder" component={CreateAssetHolderScreen} />
+      <Stack.Screen name="Create Asset" component={CreateAssetScreen} />
     </Stack.Navigator>
   </View>
 );
