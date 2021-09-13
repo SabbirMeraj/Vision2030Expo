@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet,TextInput } from 'react-native';
 import colors from '../config/colors';
 
-function InputBox({text}) {
+function InputBox({text, onChangeText}) {
     return (
         <View style={styles.container}>
             <Text style={styles.label}> {text}: </Text>
@@ -11,6 +11,7 @@ function InputBox({text}) {
 			selectionColor={'black'}
             placeholder={'Enter ' + text}
             placeholderTextColor="#000"
+            onChangeText={onChangeText}
 			/>
         </View>
     );

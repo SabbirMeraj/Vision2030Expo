@@ -7,17 +7,18 @@ import Footer from "../components/Footer";
 import Dropdown from "../components/Dropdown";
 import CalendarPicker from "../components/CalendarPicker";
 import AppButton from "../components/AppButton";
-const persons = ["Sabbir", "Siam", "Zahir", "Sadik", "Tanvir", "Akhiar", "Rafi", "Shuvo"]
+
+const assetType = ["Cash", "Prize Bond", "Bank Account", "Sanchaypatro"];
+const assetHolder = ["Sabbir", "Siam", "Zahir", "Akhiar"];
 
 
-function DepositScreen(props) {
+function CreateAssetScreen(props) {
   return (
     <Screen>
       <View style={styles.container}>
-        <Dropdown dataArray={persons} text={'Depositor'}/>
+        <Dropdown dataArray={assetType} text={'Asset Type'}/>
+        <Dropdown dataArray={assetHolder} text={'Asset Holder'}/>
         <InputBox text={"Amount"} />
-        <Dropdown dataArray={persons} text={'Collector'}/>
-        <CalendarPicker label={"Date"}/>
         <AppButton name={"Save"}/>
       </View>
       <Footer style={{ backgroundColor: colors.wildSand }} />
@@ -32,4 +33,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default DepositScreen;
+export default CreateAssetScreen;

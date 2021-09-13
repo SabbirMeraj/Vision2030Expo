@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   dropdownFieldText: { textAlign: "left" ,  fontSize: 15,},
-  dropdownList: { backgroundColor: "#EFEFEF", marginTop: -25, height: 250 },
+  dropdownList: { backgroundColor: "#EFEFEF", marginTop: -25},
   dropdownListRow: {
     //  backgroundColor: "#EFEFEF",
     //  borderBottomColor: "#C5C5C5",
