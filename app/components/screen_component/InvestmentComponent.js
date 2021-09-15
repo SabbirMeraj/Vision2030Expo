@@ -3,6 +3,7 @@ import { View } from 'react-native';
 
 import InputBox from '../InputBox';
 import CalendarPicker from '../CalendarPicker';
+
 function InvestmentComponent(props) {
     return (
        <View>

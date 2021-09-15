@@ -8,5 +8,6 @@ export default {
    white: "#fff",
    inputboxBackground: "#e9e9e9",
    button: "#9B4A83",
+   lightGrey: "#F9F9F9",
    black: "#000"
   };
