@@ -55,7 +55,7 @@ function CreateAssetTypeScreen(props) {
               extraData={id}
               keyExtractor={(item) => item.id.toString()}
               renderItem={({ item }) => (
-                <ListItemWithButtons text={item.name} />
+                <ListItemWithButtons text={item.name} onDelete={() => console.log("Delete Tapped")}/>
               )}
             />
           </View>

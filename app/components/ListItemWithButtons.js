@@ -1,16 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 import colors from '../config/colors';
 import Icon from './Icon';
 
-function ListItemWithButtons({text}) {
+function ListItemWithButtons({text, onEdit, onDelete}) {
     return (
         <View style={styles.container}>
             <Text style={styles.textStyle}> {text} </Text>
+           
+            
             <View style={styles.buttons}>
+            <TouchableOpacity onPress={onEdit}> 
             <Icon image={require("../assets/Icon/edit.png")} size={25} />
-            <Icon image={require("../assets/Icon/trash.png")} size={25} />
+            </TouchableOpacity>
+            
+            {onDelete && 
+            <TouchableOpacity onPress={onDelete}> 
+                <Icon image={require("../assets/Icon/trash.png")} size={25} />
+            </TouchableOpacity> }
            
             </View>
             
@@ -32,11 +40,10 @@ const styles = StyleSheet.create({
      },
      textStyle:{
         flex: 1,
-        fontSize: 15
+        fontSize: 15,
      },
      buttons:{
          flexDirection: 'row',
-
      }
 })
 export default ListItemWithButtons;
