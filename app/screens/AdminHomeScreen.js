@@ -87,7 +87,7 @@ function AdminHomeScreen({ navigation }) {
                 textStyle={{ marginLeft: -10 }}
               />
             </MenuOption>
-            <MenuOption onSelect={() => alert(`Save`)}>
+            <MenuOption onSelect={() =>navigation.navigate("Individual Statement")}>
               <ListItem
                 imageSrc={require("../assets/Icon/individualStatement.png")}
                 imageSize={30}
@@ -134,7 +134,7 @@ function AdminHomeScreen({ navigation }) {
                 textStyle={{ marginLeft: -10 }}
               />
             </MenuOption>
-            <MenuOption onSelect={() => alert(`Touched`)}>
+            <MenuOption onSelect={() => navigation.navigate("Update Investment")}>
               <ListItem
                 imageSrc={require("../assets/Icon/edit.png")}
                 imageSize={30}

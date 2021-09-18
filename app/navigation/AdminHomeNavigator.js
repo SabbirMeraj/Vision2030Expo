@@ -16,6 +16,8 @@ import CreateAssetHolderScreen from "../screens/CreateAssetHolderScreen";
 import CreateAssetScreen from "../screens/CreateAssetScreen";
 import RulesScreen from "../screens/RulesScreen";
 import AddLoanInfoScrren from "../screens/AddLoanInfoScreen";
+import IndividualStatementScreen from "../screens/IndividualStatementScreen";
+import UpdateInvestmentScreen from "../screens/UpdateInvestmentScreen";
 
 const Stack = createStackNavigator();
 
@@ -40,11 +42,13 @@ const AdminHomeNavigator = () => (
       <Stack.Screen name="Deposit" component={DepositScreen} />
 
       <Stack.Screen name="Add Investment" component={AddInvestmentScreen} />
+      <Stack.Screen name="Update Investment" component={UpdateInvestmentScreen} />
       <Stack.Screen name="Create Asset Type" component={CreateAssetTypeScreen} />
       <Stack.Screen name="Create Asset Holder" component={CreateAssetHolderScreen} />
       <Stack.Screen name="Create Asset" component={CreateAssetScreen} />
       <Stack.Screen name="Add Loan Info" component={AddLoanInfoScrren} />
       <Stack.Screen name="Rules" component={RulesScreen} />
+      <Stack.Screen name="Individual Statement" component={IndividualStatementScreen} />
     </Stack.Navigator>
   </View>
 );

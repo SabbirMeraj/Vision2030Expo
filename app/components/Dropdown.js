@@ -4,7 +4,7 @@ import { StyleSheet, View, Text } from "react-native";
 import colors from "../config/colors";
 import ListItem from "./ListItem";
 
-function Dropdown({ dataArray, text }) {
+function Dropdown({ dataArray, text, onSelect }) {
   return (
     <View style={styles.container}>
       <Text style={styles.label}> {text}: </Text>
@@ -12,9 +12,7 @@ function Dropdown({ dataArray, text }) {
         data={dataArray}
         // defaultValueByIndex={1}
         // defaultValue={'Egypt'}
-        onSelect={(selectedItem, index) => {
-          console.log(selectedItem, index);
-        }}
+        onSelect={onSelect}
         defaultButtonText={"Select " + text}
         buttonTextAfterSelection={(selectedItem, index) => {
           return selectedItem;
